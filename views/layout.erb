@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Sinatra Password Reset Demo</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+      .container { max-width: 400px; margin: auto; padding: 1em; background: #fff; border: 1px solid #ccc; }
+      .message { color: green; }
+      .error { color: red; }
+      form { display: flex; flex-direction: column; }
+      label { margin-top: 0.5em; }
+      input[type=email], input[type=password] { padding: 0.5em; margin-top: 0.2em; }
+      input[type=submit] { margin-top: 1em; padding: 0.5em; cursor: pointer; }
+      a { color: blue; text-decoration: none; margin-top: 1em; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

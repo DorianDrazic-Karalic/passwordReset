@@ -1,0 +1,13 @@
+<h2>Reset Your Password</h2>
+<% if @message %>
+  <p class="message"><%= @message %></p>
+<% else %>
+  <p>Enter your account email and we'll send a password reset link.</p>
+<% end %>
+<form action="/forgot" method="POST">
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email" required />
+
+  <input type="submit" value="Send Reset Link" />
+</form>
+<p><a href="/login">Back to Login</a></p>
