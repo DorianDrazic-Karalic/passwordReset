@@ -8,11 +8,11 @@ require 'time'
 enable :sessions
 set :session_secret, SecureRandom.hex(64)
 
-# Setup SQLite database connection
+
 DB = SQLite3::Database.new("users.db")
 DB.results_as_hash = true
 
-# Prevent browser caching for all responses
+
 before do
   cache_control :no_store
 end
@@ -39,7 +39,6 @@ end
 
 get '/' do
   if current_user
-    # Prevent caching of the welcome page
     headers "Cache-Control" => "no-store, no-cache, must-revalidate, max-age=0",
             "Pragma" => "no-cache",
             "Expires" => "Fri, 01 Jan 1990 00:00:00 GMT"
