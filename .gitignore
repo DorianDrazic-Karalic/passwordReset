@@ -1,0 +1,31 @@
+# Ignore bundler config
+/.bundle
+/vendor/bundle
+
+# Ignore log files and temp directories
+/log
+*.log
+/tmp
+/coverage
+
+# Ruby specific artifacts
+*.rbc
+*.o
+*.so
+*.gem
+
+# Ignore sensitive config files
+.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Test coverage reports, etc.
+/coverage/

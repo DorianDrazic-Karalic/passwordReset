@@ -4,10 +4,16 @@
 <% else %>
   <p>Enter your account email and we'll send a password reset link.</p>
 <% end %>
+
 <form action="/forgot" method="POST">
   <label for="email">Email:</label>
   <input type="email" name="email" id="email" required />
-
   <input type="submit" value="Send Reset Link" />
 </form>
+
+<% if @reset_link %>
+  <p class="message">Your reset link is:</p>
+  <p><a href="<%= @reset_link %>"><%= @reset_link %></a></p>
+<% end %>
+
 <p><a href="/login">Back to Login</a></p>
